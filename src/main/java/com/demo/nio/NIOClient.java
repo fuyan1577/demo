@@ -65,7 +65,7 @@ public class NIOClient {
                     channel.configureBlocking(false);
 
                     //在这里可以给服务端发送信息哦
-                    channel.write(ByteBuffer.wrap(new String("向服务端发送了一条信息").getBytes("UTF-8")));
+                    channel.write(ByteBuffer.wrap(new String("发送一条消息给服务端 ").getBytes("UTF-8")));
                     //在和服务端连接成功之后，为了可以接收到服务端的信息，需要给通道设置读的权限。
                     channel.register(this.selector, SelectionKey.OP_READ);
 

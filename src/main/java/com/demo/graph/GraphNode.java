@@ -23,7 +23,6 @@ public class GraphNode {
         this.value = value;
     }
 
-
     public List<GraphNode> getNextNodeList() {
         return nextNodeList;
     }
