@@ -12,7 +12,7 @@ public class CustomClassLoaderTest {
         CustomClassLoader customClassLoader = new CustomClassLoader(args[0]);
         for (int i = 1; i < args.length; i++) {
             try {
-                Class c = customClassLoader.loadClass(args[i]);
+                Class c = customClassLoader.loadClass(args[i]);  //此处并不会触发接口的加载，也就是不会触发连接操作
                 Object o = c.newInstance();
                 Greeter greeter = (Greeter) o;
                 greeter.greet();
